@@ -1,0 +1,5 @@
+.DS_Store
+.history
+data/*
+tomcat/webapps/bioscholar.war
+tomcat/webapps/bioscholar/
