@@ -1,13 +1,15 @@
-# dmulligan/docker-example-tomcat-mysql
+# docker-example-tomcat-mysql - BioScholar Edition
 
-A docker compose example project with a MySQL and a Tomcat container linked together.
+A docker compose example project with a MySQL and a Tomcat container linked together to download, unpack and run the BioScholar web application. 
+
+To run: 
+
+	$ docker-compose build
 
 To run: 
 
 	$ docker-compose up
 
-Containers:
-- MySQL: on startup, the container executes a simple database initialisation script `./db/mysql-init.sql`, which
-  creates a database containing a single table which is populated with a few records.
-- Tomcat: a simple web application, located within `./tomcat/webapps`, is deployed. The application contains some JSPs
-  to test the database link between the Tomcat and the MySQL containers.
+Edit `bmkeg/bmkeg.properties` for JDBC connection properties and the `docker-compose.yml` file for ports, etc.
+The MySQL database is built under the `./data` subdirectory, so remove that if you want to rebuild from scratch. 
+This is built on MySQL 5.5.
