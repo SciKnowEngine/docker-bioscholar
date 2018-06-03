@@ -23,3 +23,15 @@ To remove and refresh the installation:
 ```
 docker rm $(docker ps -aq)
 ```
+
+## Running commands to manipulate and build databases in the docker container.
+
+To log into the mysql docker container: 
+```
+docker exec -it docker-example-tomcat-mysql_db_1 bash 
+```
+
+To build a database using the VPDMf build tools:
+```
+java -cp /root/vpdmfCore-1.1.5-SNAPSHOT-jar-with-dependencies.jar edu.isi.bmkeg.vpdmf.bin.BuildDatabaseFromVpdmfArchive /root/vpdmf-digitalLibrary-mysql-1.1.5-SNAPSHOT.zip jdbc:mysql://db:3306/evidx root Dttef99 
+```
