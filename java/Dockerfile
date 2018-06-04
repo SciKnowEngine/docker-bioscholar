@@ -5,4 +5,5 @@ RUN wget -O /root/vpdmfGenerator-1.1.5-SNAPSHOT-jar-with-dependencies.jar "http:
 	&& wget -O /root/vpdmf-digitalLibrary-mysql-1.1.5-SNAPSHOT.zip "http://www-bcf.usc.edu/~gully/downloads/vpdmf-digitalLibrary-mysql-1.1.5-SNAPSHOT.zip" 
 RUN apt-get purge -y --auto-remove ca-certificates wget
 
-CMD ["startup.sh"] 
+COPY tomcat/startup.sh /root/ 
+CMD ["/root/startup.sh"] 
