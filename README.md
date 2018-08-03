@@ -28,7 +28,7 @@ docker rm $(docker ps -aq)
 
 To log into the mysql docker container: 
 ```
-docker exec -it docker-example-tomcat-mysql_db_1 bash 
+docker exec -it docker-bioscholar_db_1 bash
 ```
 
 To build a database using the VPDMf build tools:
